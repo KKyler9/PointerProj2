@@ -107,14 +107,14 @@ namespace KP{
 	 */
 	int findNumbOccurrences(const char *src,  const char *tag){
 		int occurences = 0;
-		int tagSize = strlen(tag); //gets set to 8?
-		int srcSize = strlen(src); //gets set to 8??
+		int tagSize = strlen(tag);
+		int srcSize = strlen(src);
 		for(int x = 0; x < srcSize; x++ ) {
 			if (*(src+x) == '\0'){
 				return occurences;
 			}
 			else if (*(src+x) == tag[0]) {
-				if(strncmp(src+x, tag, tagSize) == 0){ //Never passes comparision
+				if(strncmp(src+x, tag, tagSize) == 0){
 					occurences++;
 				}
 

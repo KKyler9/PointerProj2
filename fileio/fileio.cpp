@@ -41,9 +41,9 @@ int writeFile(std::string &filename,char *contents) {
 	if (contents == NULL){
 			return INVALID_NULL_PTR_DETECTED;
 		}
+
 	ofstream outputFile;
 	outputFile.open(filename.c_str(), ios::out);
-
 	outputFile.clear();
 	outputFile << contents;
 	outputFile.close();
